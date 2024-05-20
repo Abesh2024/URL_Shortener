@@ -27,7 +27,7 @@
           headers: {
             "content-type" : "application/json"
           },
-          body: { url: longUrl }
+          body: JSON.stringify({ url: longUrl })
         });
 
         // if (!response.ok) {

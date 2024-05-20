@@ -2,7 +2,7 @@
 import express from "express";
 import {nanoid} from "nanoid";
 import fs from "node:fs";
-import cors from "cors";
+// import cors from "cors";
 
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -13,6 +13,7 @@ const PORT = 4000;
 // app.use(cors({
 //     origin: "http://127.0.0.1:5500"
 // }));
+
 app.use(express.json());
 
 const isValidUrl = (url) =>{
@@ -32,6 +33,7 @@ app.get("/", (req, res) => {
     res.sendFile(__dirname + "/index.html");
 })
 /********* */
+
 // const input = document.getElementById
 
 app.post ("/url-shortner", (req, res) => {
